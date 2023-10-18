@@ -85,7 +85,7 @@ pyasn1-modules==0.2.8
 pycparser==2.21
 pydantic==1.10.4
 pydocstyle==6.1.1
-Pygments==2.13.0
+Pygments==2.15.0
 pylint==2.15.5
 pyparsing==3.0.9
 pyrsistent==0.18.1
