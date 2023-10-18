@@ -38,7 +38,7 @@ google-auth==2.13.0
 google-auth-oauthlib==0.4.6
 googleapis-common-protos==1.56.4
 gpustat==1.0.0
-grpcio==1.43.0
+grpcio==1.53.0
 idna==3.4
 imagesize==1.4.1
 importlib-metadata==5.0.0
