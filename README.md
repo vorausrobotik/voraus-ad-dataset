@@ -1,12 +1,18 @@
 # voraus-AD Dataset
 
+**Note:** The paper is currently under review and **not** published yet.
+
 This is the official repository to the IEEE Transactions on Robotics paper "[The voraus-AD Dataset for Anomaly Detection in Robot Applications]()" by Jan Thieß Brockmann, Marco Rudolph, Bodo Rosenhahn, and Bastian Wandt.
 
-We introduce the voraus-AD dataset, a novel dataset for anomaly detection in robotic applications as well as an unsupervised method that is able to find anomalies on robotic machine data without having some of them in the training set.
+We introduce the **voraus-AD dataset**, a novel dataset for **anomaly detection** in robotic applications as well as an **unsupervised** method that is able to find anomalies on **robotic machine data** without having some of them in the training set.
 
-[**Download the Dataset 100 Hz** (~1,1 GB Disk / ~2.5 GB RAM)](https://media.vorausrobotik.com/voraus-ad-dataset-100hz.parquet)
+[**Download the Dataset 100 Hz** ](https://media.vorausrobotik.com/voraus-ad-dataset-100hz.parquet)    
+(~1,1 GB Disk / ~2.5 GB RAM) - used in this repository
 
-[**Download the Dataset 500 Hz** (~5.3 GB Disk / ~12.5 GB RAM)](https://media.vorausrobotik.com/voraus-ad-dataset-500hz.parquet)
+[**Download the Dataset 500 Hz**](https://media.vorausrobotik.com/voraus-ad-dataset-500hz.parquet)    
+(~5.3 GB Disk / ~12.5 GB RAM)
+
+**Please note:** The datasets in both the 100 Hz and 500 Hz variants are licensed under the [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-nc-sa/4.0/) (CC BY-NC-SA 4.0).
 
 ## Getting Started
 
@@ -23,27 +29,22 @@ pip install -r requirements.txt
 
 ## Configure and Run
 
-Make sure to execute the tests before training. The test `test_train` may take a few minutes depending on your setup.
+Set the variable `DATASET_PATH` in [train.py](train.py) to the path of the downloaded dataset file.
+The variable `configuration` contains the training configuration as well as the hyperparameters of the model. The paper describes all the configuration parameters in detail. Make also sure to execute the tests before training. The test `test_train` may take a few minutes depending on your setup.
 
 ```shell
 pytest
 ```
 
-The [train.py](train.py) is best entrypoint to this repository, it contains the configuration, training and validation steps. The default configuration will run a training with paper-given parameters on the provided voraus-AD dataset.
-
-To start the training, just run [train.py](train.py)! If training on the voraus-AD data does not lead to an AUROC greater 0.9, something seems to be wrong. Don't be worried if the loss is negative. The loss reflects the negative log likelihood which may be negative.
-Please report us if you have issues when using the code.
+The [train.py](train.py) is entrypoint to this repository, it contains the configuration, training and validation steps for our model. The default configuration will run a training with **paper-given parameters** on the provided voraus-AD dataset (@100 Hz).
+To start the training, just run [train.py](train.py)! 
 
 ```shell
 python train.py
 ```
 
-## Data
-
-Our voraus-AD dataset contains the machine data of a robot arm performing a vision based pick-and-place application. Check out the [video](https://media.vorausrobotik.com/voraus-ad-dataset.mp4) of the application.
-
-Set the variable `DATASET_PATH` in [train.py](train.py) to the path of the downloaded dataset file.
-The variable `configuration` contains the training configuration as well as the **hyperparameters** of the model. The paper describes all the configuration parameters in detail.  
+If training on the voraus-AD data does not lead to an AUROC greater 0.9, something seems to be wrong. Don't be worried if the loss is negative. The loss reflects the negative log likelihood which may be negative.
+Please report us if you have issues when using the code.
 
 
 ## Devlopment
@@ -65,11 +66,13 @@ isort .
 black .
 ```
 
-and execute all checks using the following command:
+And execute all checks using the following command:
 
 ```shell
 tox
 ```
+
+**Note:** Running **tox** the first time takes a few minutes since tox creates new virtual environments for linting and testing. The following **tox** executeions are much faster.
 
 ## Credits
 
@@ -80,9 +83,10 @@ Some code of the [FrEIA framework](https://github.com/VLL-HD/FrEIA) was used for
 
 Please cite our paper in your publications if it helps your research.
 
-TODO: Not public yet.
+**Note:** The paper is currently under review and **not** published yet.
 
 
 ## License Notices
 
-This project is licensed under the [MIT License](https://opensource.org/license/mit/).
+The **content of this repository** is licensed under the [MIT License](https://opensource.org/license/mit/).   
+The **datasets** are licensed under the [CC BY-NC-SA 4.0 License](https://creativecommons.org/licenses/by-nc-sa/4.0/). 
