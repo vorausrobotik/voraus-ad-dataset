@@ -72,7 +72,7 @@ And execute all checks using the following command:
 tox
 ```
 
-**Note:** Running **tox** the first time takes a few minutes since tox creates new virtual environments for linting and testing. The following **tox** executeions are much faster.
+**Note:** Running **tox** the first time takes a few minutes since tox creates new virtual environments for linting and testing. The following **tox** executions are much faster.
 
 ## Credits
 
