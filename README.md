@@ -2,7 +2,7 @@
 
 **Note:** The paper is currently under review and **not** published yet.
 
-This is the official repository to the IEEE Transactions on Robotics paper "[The voraus-AD Dataset for Anomaly Detection in Robot Applications]()" by Jan Thieß Brockmann, Marco Rudolph, Bodo Rosenhahn, and Bastian Wandt.
+This is the official repository to the IEEE Transactions on Robotics paper "The voraus-AD Dataset for Anomaly Detection in Robot Applications" by Jan Thieß Brockmann, Marco Rudolph, Bodo Rosenhahn, and Bastian Wandt.
 
 We introduce the **voraus-AD dataset**, a novel dataset for **anomaly detection** in robotic applications as well as an **unsupervised** method that is able to find anomalies on **robotic machine data** without having some of them in the training set.
 
