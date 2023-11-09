@@ -1,10 +1,8 @@
 # voraus-AD Dataset
 
-**Note:** The paper is currently under review and **not** published yet.
+This is the official repository to the paper [**"The voraus-AD Dataset for Anomaly Detection in Robot Applications"**](https://arxiv.org/pdf/2311.04765.pdf) by Jan Thieß Brockmann, Marco Rudolph, Bodo Rosenhahn, and Bastian Wandt which is accepted to IEEE Transactions on Robotics and will be officially published soon.
 
-This is the official repository to the IEEE Transactions on Robotics paper "The voraus-AD Dataset for Anomaly Detection in Robot Applications" by Jan Thieß Brockmann, Marco Rudolph, Bodo Rosenhahn, and Bastian Wandt.
-
-We introduce the **voraus-AD dataset**, a novel dataset for **anomaly detection** in robotic applications as well as an **unsupervised** method that is able to find anomalies on **robotic machine data** without having some of them in the training set.
+We introduce the **voraus-AD dataset**, a novel dataset for **anomaly detection** in robotic applications as well as an unsupervised method **MVT-Flow** which finds anomalies on **time series of robotic machine data** without having some of them in the training set.
 
 [**Download the Dataset 100 Hz** ](https://media.vorausrobotik.com/voraus-ad-dataset-100hz.parquet)    
 (~1,1 GB Disk / ~2.5 GB RAM) - used in this repository
@@ -83,7 +81,13 @@ Some code of the [FrEIA framework](https://github.com/VLL-HD/FrEIA) was used for
 
 Please cite our paper in your publications if it helps your research.
 
-**Note:** The paper is currently under review and **not** published yet.
+    @article { BroRud2023,
+      author = {Jan Thie{\"s} Brockmann and Marco Rudolph and Bodo Rosenhahn and Bastian Wandt},
+      title = {The voraus-AD Dataset for Anomaly Detection in Robot Applications},
+      journal = {Transactions on Robotics},
+      year = {2023},
+      month = nov
+    }
 
 
 ## License Notices
